@@ -6,6 +6,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  background-color: white !important;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -30,4 +31,69 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+#myimage {
+  min-width: 130px;
+  height: 8rem;
+ 
+  object-fit: cover;
+  border-radius: 100%;
+}
+
+#myimage:last-of-type {
+  padding-left: 0;
+}
+
+.inner {
+  width: 100%;
+  overflow: hidden;
+  height: 8rem;
+}
+
+.wrapper {
+  position: absolute;
+  display: flex;
+  gap:10px
+}
+
+section {
+  display: flex;
+  animation: swipe var(--speed) linear infinite backwards;
+  gap:20px
+}
+
+@keyframes swipe {
+  0% {
+    transform: translate(0);
+  }
+
+  100% {
+    transform: translate(-100%);
+  }
+}
+.customimage{
+ height: 50vh !important;
+}
+
+.sidebar-hidden {
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Sidebar visible state */
+.sidebar-visible {
+  transform: translateX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Overlay initial hidden state */
+.overlay-hidden {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Overlay visible state */
+.overlay-visible {
+  opacity: 0.1;
+  transition: opacity 0.3s ease-in-out;
 }
