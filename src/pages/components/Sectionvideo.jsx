@@ -16,7 +16,6 @@ const Sectionvideo = () => {
     "WORMHOLE",
     "MESSARI",
     "SUZUKI",
-   
   ].map((image) => ({
     id: crypto.randomUUID(),
     image,
@@ -24,11 +23,14 @@ const Sectionvideo = () => {
   return (
     <>
       <div className="relative h-[100vh] bg-[url(/banner.svg)] bg-cover   ">
-      
         {/* Content overlay */}
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white">
           <h1 className="text-6xl text-black font-bold w-[90%]">
-          DePIN designed to harness the processing power of millions of devices, making low-cost AI processing a reality for companies
+            <span class="gradient">DePIN</span> designed to harness the
+            <span class="gradient"> processing power</span> of millions of
+            devices, making 
+            <span class="gradient"> low-cost </span>
+            <span class="gradient">AI processing</span> a reality for companies
           </h1>
           <div className="mt-[100px]">
             <span className=" text-black font-semibold text-lg">

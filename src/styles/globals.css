@@ -97,3 +97,9 @@ section {
   opacity: 0.1;
   transition: opacity 0.3s ease-in-out;
 }
+.gradient {
+  background: linear-gradient(to right, #0ae6d3, #feb47b);
+  -webkit-background-clip: text;
+  background-clip: text; /* Standard property for compatibility */
+  -webkit-text-fill-color: transparent;
+}

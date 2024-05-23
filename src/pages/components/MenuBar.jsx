@@ -15,10 +15,11 @@ const MenuBar = () => {
   const [hoveredDropdown, setHoveredDropdown] = useState(null);
   const [sidebar, setSidebar] = useState(false);
   const [poducts, setProducts] = useState(false);
+  const [pln, setPln] = useState(false);
 
   return (
     <>
-      <div className="bg-white shadow-xl  sticky top-0 w-full p-5 z-10">
+      <div className="bg-white shadow-xl  sticky top-0 w-full p-3 z-10">
         <div className="flex justify-between">
           <div className="flex gap-10 items-center">
             {sidebar ? (
@@ -40,11 +41,11 @@ const MenuBar = () => {
             <div
               className="flex items-center gap-2 cursor-pointer relative"
               onMouseEnter={() => {
-                setHoveredDropdown("products"), setProducts(true);
+                setHoveredDropdown("products"), setProducts(true),setPln(false);
               }}
-              onMouseLeave={() => setHoveredDropdown(null)}
+              // onMouseLeave={() => setHoveredDropdown(null)}
             >
-              <span className="text-black font-semibold">Products</span>
+              <span className={`text-black font-semibold ${hoveredDropdown=="products" && 'text-teal-300'} `}>Products</span>
               <FaAngleDown
                 className={`text-black transform ${
                   hoveredDropdown === "products"
@@ -55,13 +56,15 @@ const MenuBar = () => {
             </div>
             <div
               className="flex items-center gap-2 cursor-pointer relative"
-              onMouseEnter={() => setHoveredDropdown("caseStudies")}
-              onMouseLeave={() => setHoveredDropdown(null)}
+              onMouseEnter={() => {
+                setHoveredDropdown("pln"), setPln(true) ,setProducts(false);
+              }}
+              // onMouseLeave={() => setHoveredDropdown(null)}
             >
-              <span className="text-black font-semibold">$PLN Token</span>
+              <span className={`text-black font-semibold ${hoveredDropdown=="pln" && 'text-teal-300'} `}>$PLN Token</span>
               <FaAngleDown
                 className={`text-black transform ${
-                  hoveredDropdown === "caseStudies"
+                  hoveredDropdown === "pln"
                     ? "rotate-180 transition duration-300"
                     : "transition duration-300"
                 }`}
@@ -69,17 +72,17 @@ const MenuBar = () => {
             </div>
             <div
               className="flex items-center gap-2 cursor-pointer relative"
-              onMouseEnter={() => setHoveredDropdown("resources")}
+              onMouseEnter={() => {setPln(false) ,setProducts(false)}}
               onMouseLeave={() => setHoveredDropdown(null)}
             >
-              <span className="text-black font-semibold">Resources</span>
-              <FaAngleDown
+              <span className="text-black font-semibold hover:text-teal-300">Resources</span>
+              {/* <FaAngleDown
                 className={`text-black transform ${
                   hoveredDropdown === "resources"
                     ? "rotate-180 transition duration-300"
                     : "transition duration-300"
                 }`}
-              />
+              /> */}
             </div>
             <div
               className="flex items-center gap-2 cursor-pointer relative"
@@ -159,54 +162,122 @@ const MenuBar = () => {
       </div>
 
       <div
-        onMouseLeave={() => setProducts(false)}
+        onMouseLeave={() => {setProducts(false),setHoveredDropdown(null)}}
         className={`transition-all shadow-lg duration-300 ease-in-out overflow-hidden ${
           poducts
-            ? "opacity-100 h-auto bg-white absolute z-20 top-[85px] w-full p-5"
+            ? "opacity-100 h-auto bg-white absolute z-20 top-[70px] w-full p-5"
             : "z-0 absolute top-0 w-full h-0 "
         }`}
       >
         <div className="grid grid-cols-3 w-[90%] m-auto">
-          <div className="div1 hover:bg-gray-100 hover:rounded-lg cursor-pointer hover:shadow-lg p-5">
-            <div></div>
+          <div className="div1 hover:bg-gray-100 hover:rounded-lg cursor-pointer hover:shadow-lg p-5 flex items-center gap-4">
+            <div>
+              <img src="/mining.svg" width={100} height={80}></img>
+            </div>
             <div>
               <h1 className="text-black font-semibold text-xl">Mining</h1>
-              <span className="text-gray-500" >
+              <span className="text-gray-500">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. 
+                industry.
               </span>
             </div>
           </div>
-          <div className="div2 hover:bg-gray-100 hover:rounded-lg cursor-pointer hover:shadow-lg p-5">
-            <h1 className="text-black font-semibold text-xl">AI Model APIs</h1>
-            <span className="text-gray-500" >
+          <div className="div2 hover:bg-gray-100 hover:rounded-lg cursor-pointer hover:shadow-lg p-5 flex items-center gap-4">
+            <div>
+              <img src="/mining.svg" width={100} height={80}></img>
+            </div>
+            <div>
+              {" "}
+              <h1 className="text-black font-semibold text-xl">
+                AI Model APIs
+              </h1>
+              <span className="text-gray-500">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. 
+                industry.
               </span>
+            </div>
           </div>
-          <div className="div3  hover:bg-gray-100 hover:rounded-lg cursor-pointer hover:shadow-lg p-5">
-            <h1 className="text-black font-semibold text-xl">
-              Custom Model Training
-            </h1>
-            <span className="text-gray-500" >
+          <div className="div3  hover:bg-gray-100 hover:rounded-lg cursor-pointer hover:shadow-lg p-5 flex items-center gap-4">
+            <div>
+              <img src="/mining.svg" width={100} height={80}></img>
+            </div>
+            <div>
+              {" "}
+              <h1 className="text-black font-semibold text-xl">
+                Custom Model Training
+              </h1>
+              <span className="text-gray-500">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. 
+                industry.
               </span>
+            </div>
           </div>
-          <div className="div4 hover:bg-gray-100 hover:rounded-lg cursor-pointer hover:shadow-lg p-5">
-            <h1 className="text-black font-semibold text-xl">Planck Hub</h1>
-            <span className="text-gray-500" >
+          <div className="div4 hover:bg-gray-100 hover:rounded-lg cursor-pointer hover:shadow-lg p-5 flex items-center gap-4">
+            <div>
+              <img src="/Plank hub.svg" width={100} height={80}></img>
+            </div>
+            <div>
+              {" "}
+              <h1 className="text-black font-semibold text-xl">Planck Hub</h1>
+              <span className="text-gray-500">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. 
+                industry.
               </span>
+            </div>
           </div>
-          <div className="div5 hover:bg-gray-100 hover:rounded-lg cursor-pointer hover:shadow-lg p-5">
-            <h1 className="text-black font-semibold text-xl"> Token Mint</h1>
-            <span className="text-gray-500" >
+          <div className="div5 hover:bg-gray-100 hover:rounded-lg cursor-pointer hover:shadow-lg p-5 flex items-center gap-4">
+            <div>
+              <img src="/token mint.svg" width={100} height={80}></img>
+            </div>
+            <div>
+              {" "}
+              <h1 className="text-black font-semibold text-xl"> Token Mint</h1>
+              <span className="text-gray-500">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. 
+                industry.
               </span>
+            </div>
           </div>
+        </div>
+      </div>
+      <div
+        onMouseLeave={() => {setPln(false),setHoveredDropdown(null)}}
+        className={`transition-all shadow-lg duration-300 ease-in-out overflow-hidden ${
+          pln
+            ? "opacity-100 h-auto bg-white absolute z-20 top-[70px] w-full p-5"
+            : "z-0 absolute top-0 w-full h-0 "
+        }`}
+      >
+        <div className="grid grid-cols-2 w-[90%] m-auto">
+          <div className="div1 hover:bg-gray-100 hover:rounded-lg cursor-pointer hover:shadow-lg p-5 flex items-center gap-4">
+            <div>
+              <img src="/token information.svg" width={100} height={80}></img>
+            </div>
+            <div>
+              <h1 className="text-black font-semibold text-xl">Token information</h1>
+              <span className="text-gray-500">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry.
+              </span>
+            </div>
+          </div>
+          <div className="div2 hover:bg-gray-100 hover:rounded-lg cursor-pointer hover:shadow-lg p-5 flex items-center gap-4">
+            <div>
+              <img src="/PLN earning calculator.svg" width={100} height={80}></img>
+            </div>
+            <div>
+              {" "}
+              <h1 className="text-black font-semibold text-xl">
+              $PLN earnings calculator
+              </h1>
+              <span className="text-gray-500">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry.
+              </span>
+            </div>
+          </div>
+         
+         
         </div>
       </div>
     </>
