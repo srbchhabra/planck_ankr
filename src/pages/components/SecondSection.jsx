@@ -4,21 +4,22 @@ import Image from "next/image";
 import { DiAndroid } from "react-icons/di";
 import { FaWindows } from "react-icons/fa";
 import { FaApple } from "react-icons/fa6";
-
+import { IoMdDownload } from "react-icons/io";
 const SecondSection = () => {
   return (
     <div className="flex flex-col  justify-center items-center">
       <div className="bg-white rounded-2xl  shadow-2xl relative top-[-100px] w-[90%] ">
         <div className="grid grid-cols-12  ">
           <div className="col-span-4 h-full p-9 ">
-            <div className="mb-5 flex  items-center justify-start">
+            <div className="mb-5 flex  items-center justify-start gap-3">
               {" "}
               <img
-                src="https://cdn.dribbble.com/userupload/9418415/file/original-3656f30e44c3bdd4d7b2818befb03749.jpg?resize=400x0"
-                width={100}
-                height={200}
+                className="p-1"
+                src="/mining.svg"
+                width={50}
+                height={80}
               />{" "}
-              <span className="text-blue-800 text-3xl font-semibold ">
+              <span className="text-teal-500 text-3xl font-semibold ">
                 {" "}
                 AI Model APIs
               </span>
@@ -57,16 +58,12 @@ const SecondSection = () => {
           </div>
         </div>
       </div>
-      <div className=" bg-white mt-[-50px] flex gap-10 justify-center w-[90%]">
-        <div className="rounded-2xl p-10 w-full border-[1px] bg-white flex flex-col justify-between gap-5 shadow-xl ">
-          <div className="mb-2 flex  items-center justify-start">
+      <div className="  mt-[-50px] flex gap-10 justify-center w-[90%]">
+        <div className="rounded-2xl p-10 w-full  bg-white flex flex-col justify-between gap-5 shadow-xl ">
+          <div className="mb-2 flex  items-center justify-start gap-3">
             {" "}
-            <img
-              src="https://cdn.dribbble.com/userupload/9418415/file/original-3656f30e44c3bdd4d7b2818befb03749.jpg?resize=400x0"
-              width={100}
-              height={200}
-            />{" "}
-            <span className="text-blue-800 text-3xl font-semibold ">
+            <img className="p-1" src="/mining.svg" width={50} height={80} />
+            <span className="text-teal-500 text-3xl font-semibold ">
               {" "}
               Mining
             </span>
@@ -74,8 +71,8 @@ const SecondSection = () => {
           <div className="flex flex-col">
             <span className="text-black text-4xl font-bold ">
               {" "}
-              The world’s simplest mining app available on Windows, MacOS, Linux and Android
-
+              The world’s simplest mining app available on Windows, MacOS, Linux
+              and Android
             </span>
             <div className="flex flex-col mt-5">
               <ul className="list-disc text-black font-semibold ml-5">
@@ -85,7 +82,7 @@ const SecondSection = () => {
                 <li>Download app and start earning $PLN</li>
               </ul>
             </div>
-            <div className="flex gap-3 mt-5 items-center" >
+            <div className="flex gap-3 mt-5 items-center">
               <FaWindows className="text-blue-500 text-3xl " />
               <DiAndroid className="text-green-500 text-3xl " />
               <FaApple className="text-black text-4xl " />
@@ -93,8 +90,9 @@ const SecondSection = () => {
           </div>
           <div className="flex w-full gap-10 mt-10">
             <Button
-              customClass={"h-[60px] justify-center w-full"}
-              label="Start fo Free"
+            icon={<IoMdDownload/>}
+              customClass={"h-[60px] bg-teal-500 justify-center w-full"}
+              label="Download Now"
             />
             <Button
               customClass={"h-[60px] justify-center w-full"}
@@ -102,15 +100,16 @@ const SecondSection = () => {
             />
           </div>
         </div>
-        <div className="rounded-2xl p-10 w-full border-[1px] bg-white flex flex-col justify-between gap-5 shadow-xl ">
-          <div className="mb-5 flex  items-center justify-start">
+        <div className="rounded-2xl p-10 w-full  bg-white flex flex-col justify-between gap-5 shadow-xl ">
+          <div className="mb-5 flex  items-center justify-start gap-3">
             {" "}
             <img
-              src="https://cdn.dribbble.com/userupload/9418415/file/original-3656f30e44c3bdd4d7b2818befb03749.jpg?resize=400x0"
-              width={100}
-              height={200}
+              className="p-1"
+              src="/mining.svg"
+              width={50}
+              height={80}
             />{" "}
-            <span className="text-blue-800 text-3xl font-semibold ">
+            <span className="text-teal-500 text-3xl font-semibold ">
               {" "}
               Custom Model Training
             </span>
@@ -118,14 +117,13 @@ const SecondSection = () => {
           <div className="flex flex-col w-full">
             <span className="text-black text-4xl font-bold w-full ">
               {" "}
-              End-to-end ML infrastructure for efficient training of custom models
-
+              End-to-end ML infrastructure for efficient training of custom
+              models
             </span>
             <div className="flex flex-col mt-5">
               <ul className="list-disc text-black font-semibold ml-5">
                 <li>Easily deploy custom model on Planck networkd</li>
                 <li>Low-cost compute that scales to meet your goals</li>
-               
               </ul>
             </div>
           </div>
@@ -141,17 +139,18 @@ const SecondSection = () => {
           </div>
         </div>
       </div>
-      <div className="rounded-2xl w-[90%] bg-[url(/neura.svg)] border bg-cover p-5 mt-10 shadow-xl ">
-        <div className="flex flex-col w-[40%] gap-5">
+      <div className="rounded-2xl w-[90%] bg-[url(/neura.svg)]  bg-cover p-5 mt-10 shadow-2xl ">
+        <div className="flex flex-col w-[50%] gap-5">
           <span className="text-xl font-bold font-sans text-teal-500">
             NEURA
           </span>
           <span className="text-5xl font-bold text-black">
-            The blockchain built for AI.
+            The blockchain built for AI inferencing
           </span>
           <span className="text-lg font-medium text-black ">
-            Neura's fusion of technologies transforms scalability, economics,
-            and security for AI models.
+            Our unique blockchain architecture with zkVMs and PoUW to keep the
+            computational intense processing off-chain for high throughput,
+            scalability and efficiency purpose-build for AI processing.
           </span>
           <div className="flex w-full gap-10 mt-10">
             <Button
@@ -159,47 +158,86 @@ const SecondSection = () => {
               label="Start fo Free"
             />
             <Button
-              customClass={"h-[60px] border-[1px] justify-center w-full"}
+              customClass={"h-[60px]  justify-center w-full"}
               label="Learn More"
             />
           </div>
         </div>
       </div>
       <div className="flex flex-col gap-5 items-center text-center mt-[100px]">
-        <div className="w-[50%] flex flex-col gap-11">
+        <div className="w-[60%] flex flex-col gap-11">
           <span className="text-black font-bold text-6xl ">
-            A world-class DePIN to power your projects.
+            A DePIN ready for mass-adoption.
           </span>
           <span className="text-gray-800 font-medium text-xl">
-            Ankr's Decentralized Physical Infrastructure Network (DePIN) of
-            nodes ensures Ankr's clients always have the shortest roundtrip path
-            for RPC requests, providing fast Web3 experiences no matter where
-            users are.
+            Planck’s decentralized compute network can utilize smartphones,
+            everyday desktops, game pc’s, mining farms and data centers for AI
+            processing and training. There is no need for tech skills or crypto
+            knowledge to participate as miner, in a world in which 90% of users
+            don’t know how to change their wifi password, Planck’s simplicity is
+            the key to unleashing computational power at scale.
           </span>
         </div>
-        <div className="grid grid-cols-3 mt-5 w-[90%]">
-          <div className="flex flex-col justify-center border-r-2">
-            <span className="text-black font-bold text-5xl">8 Billion</span>
+        <div className="grid grid-cols-2 mt-5 w-[90%]">
+          <div className="flex gap-3 p-2 flex-col justify-start border-r-2">
+            <span className="text-teal-500 font-bold text-5xl">
+              Compute on Planck
+            </span>
             <span className="text-black font-semibold text-2xl">
-              Daily RPC requests across the map
+              20+ TB RAM/Memory
+            </span>
+            <span className="text-black font-semibold text-2xl">
+              500+ Individual miners in 40 different countries
+            </span>
+            <span className="text-black font-semibold text-2xl">
+              300+ Nvidia GPU’s | 1k+ CPU’s
             </span>
           </div>
-          <div className="flex flex-col justify-center border-r-2 pl-3">
-            <span className="text-black font-bold text-5xl ">30+</span>
+          <div className="flex gap-3 p-2 flex-col justify-start  pl-3">
+            <span className="text-teal-500 font-bold text-5xl ">
+              Builders on Planck
+            </span>
             <span className="text-black font-semibold text-2xl">
-              Global regions with bare-metal nodes
+              50+ AI companies
+            </span>
+            <span className="text-black font-semibold text-2xl">
+              5+ AI software development agencies
+            </span>
+            <span className="text-black font-semibold text-2xl">
+              2 AI incubators
             </span>
           </div>
-          <div className="flex flex-col justify-center pl-3">
+          {/* <div className="flex gap-3 p-2 flex-col justify-start border-r-2 pl-3">
             <span className="text-black font-bold text-5xl ">760k</span>
             <span className="text-black font-semibold text-2xl">
               Unique geo locations served monthly
             </span>
-          </div>
+          </div> */}
         </div>
       </div>
       <div>
         <img className="w-full drop-shadow-xl " src="/globe.svg"></img>
+      </div>
+      <div className=" w-[90%] h-[70vh] shadow-xl rounded-xl  flex ">
+        <div className="bg-[url(/eneterprisenew.jpg)] rounded-s-xl p-5 h-full  bg-no-repeat drop-shadow-2xl w-full bg-cover "></div>
+        <div className="bg-[#374151] rounded-e-xl w-[48%] p-8 flex flex-col justify-between gap-10">
+          <div className="flex flex-col gap-10" >
+          <span className="font-bold text-4xl">
+            Enterprise Solutions tailored to your business
+          </span>
+          <span className="text-semibold text-xl">
+            Contact our team for API and infrastructure services customized to
+            your enterprise, or compute
+          </span>
+          </div>
+         
+          <div>
+            <Button
+              customClass={"h-[60px] bg-teal-500 justify-center w-[40%]"}
+              label="Learn More"
+            />
+          </div>
+        </div>
       </div>
     </div>
   );

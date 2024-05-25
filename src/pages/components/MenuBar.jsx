@@ -16,6 +16,7 @@ const MenuBar = () => {
   const [sidebar, setSidebar] = useState(false);
   const [poducts, setProducts] = useState(false);
   const [pln, setPln] = useState(false);
+  const [comp, setComp] = useState(false);
 
   return (
     <>
@@ -72,7 +73,7 @@ const MenuBar = () => {
             </div>
             <div
               className="flex items-center gap-2 cursor-pointer relative"
-              onMouseEnter={() => {setPln(false) ,setProducts(false)}}
+              onMouseEnter={() => {setPln(false) ,setProducts(false),setComp(false),setHoveredDropdown(null)}}
               onMouseLeave={() => setHoveredDropdown(null)}
             >
               <span className="text-black font-semibold hover:text-teal-300">Resources</span>
@@ -86,10 +87,10 @@ const MenuBar = () => {
             </div>
             <div
               className="flex items-center gap-2 cursor-pointer relative"
-              onMouseEnter={() => setHoveredDropdown("company")}
-              onMouseLeave={() => setHoveredDropdown(null)}
+              onMouseEnter={() => {setHoveredDropdown("company"), setComp(true), setPln(false) ,setProducts(false)}}
+              // onMouseLeave={() => setHoveredDropdown(null)}
             >
-              <span className="text-black font-semibold">Company</span>
+               <span className={`text-black font-semibold ${hoveredDropdown=="company" && 'text-teal-300'} `}>Company</span>
               <FaAngleDown
                 className={`text-black transform ${
                   hoveredDropdown === "company"
@@ -112,7 +113,7 @@ const MenuBar = () => {
             </div>
           </div>
           <div>
-            <Button label="Build AI App "></Button>
+            <Button customClass={"bg-teal-500"} label="Build AI App "></Button>
           </div>
         </div>
       </div>
@@ -175,7 +176,7 @@ const MenuBar = () => {
               <img src="/mining.svg" width={100} height={80}></img>
             </div>
             <div>
-              <h1 className="text-black font-semibold text-xl">Mining</h1>
+              <h1 className="text-black font-semibold text-lg">Mining</h1>
               <span className="text-gray-500">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry.
@@ -188,7 +189,7 @@ const MenuBar = () => {
             </div>
             <div>
               {" "}
-              <h1 className="text-black font-semibold text-xl">
+              <h1 className="text-black font-semibold text-lg">
                 AI Model APIs
               </h1>
               <span className="text-gray-500">
@@ -203,7 +204,7 @@ const MenuBar = () => {
             </div>
             <div>
               {" "}
-              <h1 className="text-black font-semibold text-xl">
+              <h1 className="text-black font-semibold text-lg">
                 Custom Model Training
               </h1>
               <span className="text-gray-500">
@@ -218,7 +219,7 @@ const MenuBar = () => {
             </div>
             <div>
               {" "}
-              <h1 className="text-black font-semibold text-xl">Planck Hub</h1>
+              <h1 className="text-black font-semibold text-lg">Planck Hub</h1>
               <span className="text-gray-500">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry.
@@ -231,7 +232,7 @@ const MenuBar = () => {
             </div>
             <div>
               {" "}
-              <h1 className="text-black font-semibold text-xl"> Token Mint</h1>
+              <h1 className="text-black font-semibold text-lg"> Token Mint</h1>
               <span className="text-gray-500">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry.
@@ -254,7 +255,7 @@ const MenuBar = () => {
               <img src="/token information.svg" width={100} height={80}></img>
             </div>
             <div>
-              <h1 className="text-black font-semibold text-xl">Token information</h1>
+              <h1 className="text-black font-semibold text-lg">Token information</h1>
               <span className="text-gray-500">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry.
@@ -267,8 +268,48 @@ const MenuBar = () => {
             </div>
             <div>
               {" "}
-              <h1 className="text-black font-semibold text-xl">
+              <h1 className="text-black font-semibold text-lg">
               $PLN earnings calculator
+              </h1>
+              <span className="text-gray-500">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry.
+              </span>
+            </div>
+          </div>
+         
+         
+        </div>
+      </div>
+      <div
+        onMouseLeave={() => {setComp(false),setHoveredDropdown(null)}}
+        className={`transition-all shadow-lg duration-300 ease-in-out overflow-hidden ${
+          comp
+            ? "opacity-100 h-auto bg-white absolute z-20 top-[70px] w-full p-5"
+            : "z-0 absolute top-0 w-full h-0 "
+        }`}
+      >
+        <div className="grid grid-cols-2 w-[90%] m-auto">
+          <div className="div1 hover:bg-gray-100 hover:rounded-lg cursor-pointer hover:shadow-lg p-5 flex items-center gap-4">
+            <div>
+              <img src="/aboutus.svg" width={80} height={80}></img>
+            </div>
+            <div>
+              <h1 className="text-black font-semibold text-lg">About Us</h1>
+              <span className="text-gray-500">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry.
+              </span>
+            </div>
+          </div>
+          <div className="div2 hover:bg-gray-100 hover:rounded-lg cursor-pointer hover:shadow-lg p-5 flex items-center gap-4">
+            <div>
+              <img src="/press.svg" width={80} height={80}></img>
+            </div>
+            <div>
+              {" "}
+              <h1 className="text-black font-semibold text-lg">
+              Press
               </h1>
               <span className="text-gray-500">
                 Lorem Ipsum is simply dummy text of the printing and typesetting

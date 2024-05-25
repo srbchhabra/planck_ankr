@@ -98,8 +98,41 @@ section {
   transition: opacity 0.3s ease-in-out;
 }
 .gradient {
-  background: linear-gradient(to right, #0ae6d3, #feb47b);
+  background: linear-gradient(to right, #63ccb6, #7fd19f);
   -webkit-background-clip: text;
   background-clip: text; /* Standard property for compatibility */
   -webkit-text-fill-color: transparent;
+}
+.banner-container {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  white-space: nowrap;
+}
+
+.banner-content {
+  display: flex;
+  width: max-content;
+  animation: scroll linear infinite;
+}
+
+.banner-item {
+  flex-shrink: 0;
+  padding: 10px;
+}
+
+.banner-image {
+  height: 80px; /* Adjust height as needed */
+  width: 80px; /* Adjust width as needed */
+  object-fit: contain; /* Maintain aspect ratio */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }

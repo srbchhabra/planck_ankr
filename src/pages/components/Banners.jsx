@@ -1,33 +1,44 @@
 import React from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-const Banners = ({ images, speed = 5000 }) => {
+const Banner = ({ images, speed }) => {
+  const settings = {
+    dots: false,
+    infinite: true,
+    slidesToShow: 10,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 2000,
+    autoplaySpeed: 2000,
+    cssEase: "linear",
+
+  
+  
+
+  };
+
+  const imageStyle = {
+    height: '150px',  // Fixed height
+    width: '200px',   // Fixed width
+    objectFit: 'contain',
+    aspectRatio:'3/2',
+     // Maintain aspect ratio
+   // Optional padding
+  };
+
   return (
-    <div className="inner h-full">
-      <div className="wrapper">
-        <section style={{ "--speed": `${speed}ms` }}>
-          {images?.map(({ id, image }) => (
-         <div className="w-full" key={id}>
-              <span className="w-full text-2xl font-semibold text-nowrap" >{image}</span> 
-            </div>
-          ))}
-        </section>
-        <section style={{ "--speed": `${speed}ms` }}>
-          {images?.map(({ id, image }) => (
-           <div className="w-full"  key={id}>
-               <span className="w-full text-2xl font-semibold text-nowrap " >{image}</span> 
-            </div>
-          ))}
-        </section>
-        <section style={{ "--speed": `${speed}ms` }}>
-          {images?.map(({ id, image }) => (
-            <div className="w-full" key={id}>
-               <span className="w-full text-2xl font-semibold text-nowrap " >{image}</span> 
-            </div>
-          ))}
-        </section>
-      </div>
+    <div className="slider-container">
+      <Slider {...settings}>
+        {images.map((img) => (
+          <div key={img.id} className="slider-container">
+            <img src={img.image} alt="brand logo" className="m-2 p-2" style={imageStyle} />
+          </div>
+        ))}
+      </Slider>
     </div>
   );
 };
 
-export default Banners;
+export default Banner;
