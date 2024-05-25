@@ -31,7 +31,7 @@ const Banner = ({ images, speed }) => {
   return (
     <div className="slider-container">
       <Slider {...settings}>
-        {images.map((img) => (
+        {images?.map((img) => (
           <div key={img.id} className="slider-container">
             <img src={img.image} alt="brand logo" className="m-2 p-2" style={imageStyle} />
           </div>
