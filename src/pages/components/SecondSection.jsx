@@ -139,7 +139,7 @@ const SecondSection = () => {
           </div>
         </div>
       </div>
-      <div className="rounded-2xl w-[90%] bg-[url(/neura.svg)]  bg-cover p-5 mt-10 shadow-2xl ">
+      <div className="rounded-2xl w-[90%] bg-[url(/neura.svg)] bg-white  bg-cover p-5 mt-10 shadow-2xl ">
         <div className="flex flex-col w-[50%] gap-5">
           <span className="text-xl font-bold font-sans text-teal-500">
             NEURA
@@ -218,8 +218,8 @@ const SecondSection = () => {
       <div>
         <img className="w-full drop-shadow-xl " src="/globe.svg"></img>
       </div>
-      <div className=" w-[90%] h-[70vh] shadow-xl rounded-xl  flex ">
-        <div className="bg-[url(/eneterprisenew.jpg)] rounded-s-xl p-5 h-full  bg-no-repeat drop-shadow-2xl w-full bg-cover "></div>
+      <div className=" w-[90%]  shadow-xl rounded-xl  flex ">
+        <div className="bg-[url(/eneterprise2.svg)] bg-white  rounded-s-xl p-5 h-full  bg-no-repeat drop-shadow-2xl w-full bg-cover "></div>
         <div className="bg-[#374151] rounded-e-xl w-[48%] p-8 flex flex-col justify-between gap-10">
           <div className="flex flex-col gap-10" >
           <span className="font-bold text-4xl">

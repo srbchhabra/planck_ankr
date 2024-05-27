@@ -6,6 +6,7 @@ import Sectionvideo from "./components/Sectionvideo";
 
 export default function Home() {
   return (
+    
     <div className="bg-[#e2fffd] h-full w-full">
       <div className="sticky top-0 z-10">
         <MenuBar />
@@ -18,5 +19,6 @@ export default function Home() {
       </div>
       <Footer/>
     </div>
+ 
   );
 }

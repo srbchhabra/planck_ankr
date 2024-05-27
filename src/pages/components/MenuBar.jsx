@@ -20,8 +20,9 @@ const MenuBar = () => {
 
   return (
     <>
-      <div className="bg-white shadow-xl  sticky top-0 w-full p-3 z-10">
-        <div className="flex justify-between">
+      <div className="bg-white shadow-xl  sticky top-0 w-full z-10">
+        {/* <div className="bg-black p-[1px] text-center " ><span className="text-white font-medium text-center" >Planck Incentivized Testnet Is Live | Download Mining App Now</span></div> */}
+        <div className="flex justify-between p-3">
           <div className="flex gap-10 items-center">
             {sidebar ? (
               <RxCross1
@@ -42,11 +43,19 @@ const MenuBar = () => {
             <div
               className="flex items-center gap-2 cursor-pointer relative"
               onMouseEnter={() => {
-                setHoveredDropdown("products"), setProducts(true),setPln(false);
+                setHoveredDropdown("products"),
+                  setProducts(true),
+                  setPln(false);
               }}
               // onMouseLeave={() => setHoveredDropdown(null)}
             >
-              <span className={`text-black font-semibold ${hoveredDropdown=="products" && 'text-teal-300'} `}>Products</span>
+              <span
+                className={`text-black font-semibold ${
+                  hoveredDropdown == "products" && "text-teal-300"
+                } `}
+              >
+                Products
+              </span>
               <FaAngleDown
                 className={`text-black transform ${
                   hoveredDropdown === "products"
@@ -58,11 +67,17 @@ const MenuBar = () => {
             <div
               className="flex items-center gap-2 cursor-pointer relative"
               onMouseEnter={() => {
-                setHoveredDropdown("pln"), setPln(true) ,setProducts(false);
+                setHoveredDropdown("pln"), setPln(true), setProducts(false);
               }}
               // onMouseLeave={() => setHoveredDropdown(null)}
             >
-              <span className={`text-black font-semibold ${hoveredDropdown=="pln" && 'text-teal-300'} `}>$PLN Token</span>
+              <span
+                className={`text-black font-semibold ${
+                  hoveredDropdown == "pln" && "text-teal-300"
+                } `}
+              >
+                $PLN Token
+              </span>
               <FaAngleDown
                 className={`text-black transform ${
                   hoveredDropdown === "pln"
@@ -73,10 +88,17 @@ const MenuBar = () => {
             </div>
             <div
               className="flex items-center gap-2 cursor-pointer relative"
-              onMouseEnter={() => {setPln(false) ,setProducts(false),setComp(false),setHoveredDropdown(null)}}
+              onMouseEnter={() => {
+                setPln(false),
+                  setProducts(false),
+                  setComp(false),
+                  setHoveredDropdown(null);
+              }}
               onMouseLeave={() => setHoveredDropdown(null)}
             >
-              <span className="text-black font-semibold hover:text-teal-300">Resources</span>
+              <span className="text-black font-semibold hover:text-teal-300">
+                Resources
+              </span>
               {/* <FaAngleDown
                 className={`text-black transform ${
                   hoveredDropdown === "resources"
@@ -87,10 +109,21 @@ const MenuBar = () => {
             </div>
             <div
               className="flex items-center gap-2 cursor-pointer relative"
-              onMouseEnter={() => {setHoveredDropdown("company"), setComp(true), setPln(false) ,setProducts(false)}}
+              onMouseEnter={() => {
+                setHoveredDropdown("company"),
+                  setComp(true),
+                  setPln(false),
+                  setProducts(false);
+              }}
               // onMouseLeave={() => setHoveredDropdown(null)}
             >
-               <span className={`text-black font-semibold ${hoveredDropdown=="company" && 'text-teal-300'} `}>Company</span>
+              <span
+                className={`text-black font-semibold ${
+                  hoveredDropdown == "company" && "text-teal-300"
+                } `}
+              >
+                Company
+              </span>
               <FaAngleDown
                 className={`text-black transform ${
                   hoveredDropdown === "company"
@@ -133,22 +166,22 @@ const MenuBar = () => {
           }`}
         >
           {/* <Button label="close" onClick={() => setSidebar(!sidebar)} /> */}
-          <span className="text-black flex gap-2 items-center font-semibold text-xl cursor-pointer hover:text-teal-500 hover:shadow-lg transition-all duration-300  border-b-2 p-1 ">
+          <span className="text-black flex gap-2 items-center  text-xl cursor-pointer hover:text-teal-500 hover:shadow-lg transition-all duration-300  border-b-2 p-1 ">
             <MdDeveloperMode className="h-6 " /> Access Developer Platform{" "}
           </span>
-          <span className="text-black font-semibold text-xl cursor-pointer flex gap-2 hover:text-teal-500 border-b-2 p-1 items-center hover:shadow-lg transition-all duration-300  ">
+          <span className="text-black text-xl cursor-pointer  flex gap-2 hover:text-teal-500 border-b-2 p-1 items-center hover:shadow-lg transition-all duration-300  ">
             <IoMdDownload /> Download Mining App
           </span>
-          <span className="text-black font-semibold flex gap-2 items-center text-xl cursor-pointer hover:text-teal-500 border-b-2 p-1 hover:shadow-lg transition-all duration-300 ">
+          <span className="text-black  flex gap-2 items-center text-xl cursor-pointer hover:text-teal-500 border-b-2 p-1 hover:shadow-lg transition-all duration-300 ">
             <MdRocketLaunch /> Launch Planck Hub{" "}
           </span>
-          <span className="text-black font-semibold flex gap-2 items-center text-xl cursor-pointer hover:text-teal-500 border-b-2 p-1 hover:shadow-lg transition-all duration-300  ">
+          <span className="text-black  flex gap-2 items-center text-xl cursor-pointer hover:text-teal-500 border-b-2 p-1 hover:shadow-lg transition-all duration-300  ">
             <MdOutlineTravelExplore /> Visit Block Explorer{" "}
           </span>
-          <span className="text-black font-semibold flex gap-2 items-center  text-xl cursor-pointer hover:text-teal-500 border-b-2 p-1 hover:shadow-lg transition-all duration-300  ">
+          <span className="text-black  flex gap-2 items-center  text-xl cursor-pointer hover:text-teal-500 border-b-2 p-1 hover:shadow-lg transition-all duration-300  ">
             <MdMarkChatUnread /> Read Tokenomics
           </span>
-          <span className="text-black font-semibold flex gap-2 items-center  text-xl cursor-pointer hover:text-teal-500 border-b-2 p-1 hover:shadow-lg transition-all duration-300 ">
+          <span className="text-black  flex gap-2 items-center  text-xl cursor-pointer hover:text-teal-500 border-b-2 p-1 hover:shadow-lg transition-all duration-300 ">
             <SiGoogledocs /> Read Docs{" "}
           </span>
         </div>
@@ -163,7 +196,9 @@ const MenuBar = () => {
       </div>
 
       <div
-        onMouseLeave={() => {setProducts(false),setHoveredDropdown(null)}}
+        onMouseLeave={() => {
+          setProducts(false), setHoveredDropdown(null);
+        }}
         className={`transition-all shadow-lg duration-300 ease-in-out overflow-hidden ${
           poducts
             ? "opacity-100 h-auto bg-white absolute z-20 top-[70px] w-full p-5"
@@ -242,7 +277,9 @@ const MenuBar = () => {
         </div>
       </div>
       <div
-        onMouseLeave={() => {setPln(false),setHoveredDropdown(null)}}
+        onMouseLeave={() => {
+          setPln(false), setHoveredDropdown(null);
+        }}
         className={`transition-all shadow-lg duration-300 ease-in-out overflow-hidden ${
           pln
             ? "opacity-100 h-auto bg-white absolute z-20 top-[70px] w-full p-5"
@@ -255,7 +292,9 @@ const MenuBar = () => {
               <img src="/token information.svg" width={100} height={80}></img>
             </div>
             <div>
-              <h1 className="text-black font-semibold text-lg">Token information</h1>
+              <h1 className="text-black font-semibold text-lg">
+                Token information
+              </h1>
               <span className="text-gray-500">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry.
@@ -264,12 +303,16 @@ const MenuBar = () => {
           </div>
           <div className="div2 hover:bg-gray-100 hover:rounded-lg cursor-pointer hover:shadow-lg p-5 flex items-center gap-4">
             <div>
-              <img src="/PLN earning calculator.svg" width={100} height={80}></img>
+              <img
+                src="/PLN earning calculator.svg"
+                width={100}
+                height={80}
+              ></img>
             </div>
             <div>
               {" "}
               <h1 className="text-black font-semibold text-lg">
-              $PLN earnings calculator
+                $PLN earnings calculator
               </h1>
               <span className="text-gray-500">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -277,12 +320,12 @@ const MenuBar = () => {
               </span>
             </div>
           </div>
-         
-         
         </div>
       </div>
       <div
-        onMouseLeave={() => {setComp(false),setHoveredDropdown(null)}}
+        onMouseLeave={() => {
+          setComp(false), setHoveredDropdown(null);
+        }}
         className={`transition-all shadow-lg duration-300 ease-in-out overflow-hidden ${
           comp
             ? "opacity-100 h-auto bg-white absolute z-20 top-[70px] w-full p-5"
@@ -308,17 +351,13 @@ const MenuBar = () => {
             </div>
             <div>
               {" "}
-              <h1 className="text-black font-semibold text-lg">
-              Press
-              </h1>
+              <h1 className="text-black font-semibold text-lg">Press</h1>
               <span className="text-gray-500">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry.
               </span>
             </div>
           </div>
-         
-         
         </div>
       </div>
     </>
