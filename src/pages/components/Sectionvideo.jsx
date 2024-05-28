@@ -56,14 +56,14 @@ const Sectionvideo = () => {
             <span class="gradient"> processing</span>
            
           </h1>
-          <div className="mt-[100px]">
+          <div className="mt-[100px] xl:mt-[200px]">
             <span className=" text-black font-semibold text-lg">
               Trusted by the best in business and blockchain
             </span>
           </div>
         </div>
 
-        <div className="absolute bottom-0 w-full overflow-hidden mb-24">
+        <div className="absolute bottom-0  w-full overflow-hidden mb-24">
           <Banner images={images} speed={20000} />
         </div>
       </div>

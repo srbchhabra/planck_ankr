@@ -29,8 +29,8 @@ const SecondSection = () => {
               {" "}
               The industries leading open-source AI models
             </span>
-            <div className="flex flex-col mt-5">
-              <ul className="list-disc text-black font-semibold ml-5">
+            <div className="flex flex-col items-start p-0 mt-5">
+              <ul className=" text-black font-semibold ">
                 <li>No up-front costs</li>
                 <li>No vendor lock-in</li>
                 <li>Automatic scaling </li>
@@ -39,11 +39,11 @@ const SecondSection = () => {
             </div>
             <div className="flex w-full gap-10 mt-10">
               <Button
-                customClass={"h-[60px] justify-center w-full"}
-                label="Start fo Free"
+                customClass={"h-[60px] text-nowrap justify-center w-full"}
+                label="Start for Free"
               />
               <Button
-                customClass={"h-[60px] justify-center w-full"}
+                customClass={"h-[60px] text-nowrap justify-center w-full"}
                 label="Learn More"
               />
             </div>
@@ -71,11 +71,10 @@ const SecondSection = () => {
           <div className="flex flex-col">
             <span className="text-black text-4xl font-bold ">
               {" "}
-              The world’s simplest mining app available on Windows, MacOS, Linux
-              and Android
+              The world’s simplest mining app 
             </span>
             <div className="flex flex-col mt-5">
-              <ul className="list-disc text-black font-semibold ml-5">
+              <ul className=" text-black font-semibold">
                 <li>No technical skills or crypto knowledge required</li>
                 <li>PlanckOS for unmatched security</li>
                 <li>Flexible configuration settings </li>
@@ -90,7 +89,7 @@ const SecondSection = () => {
           </div>
           <div className="flex w-full gap-10 mt-10">
             <Button
-            icon={<IoMdDownload/>}
+              icon={<IoMdDownload />}
               customClass={"h-[60px] bg-teal-500 justify-center w-full"}
               label="Download Now"
             />
@@ -121,7 +120,7 @@ const SecondSection = () => {
               models
             </span>
             <div className="flex flex-col mt-5">
-              <ul className="list-disc text-black font-semibold ml-5">
+              <ul className=" text-black font-semibold ">
                 <li>Easily deploy custom model on Planck networkd</li>
                 <li>Low-cost compute that scales to meet your goals</li>
               </ul>
@@ -141,9 +140,7 @@ const SecondSection = () => {
       </div>
       <div className="rounded-2xl w-[90%] bg-[url(/neura.svg)] bg-white  bg-cover p-5 mt-10 shadow-2xl ">
         <div className="flex flex-col w-[50%] gap-5">
-          <span className="text-xl font-bold font-sans text-teal-500">
-            NEURA
-          </span>
+          
           <span className="text-5xl font-bold text-black">
             The blockchain built for AI inferencing
           </span>
@@ -180,30 +177,30 @@ const SecondSection = () => {
         </div>
         <div className="grid grid-cols-2 mt-5 w-[90%]">
           <div className="flex gap-3 p-2 flex-col justify-start border-r-2">
-            <span className="text-teal-500 font-bold text-5xl">
+            <span className="text-teal-500 font-bold text-2xl">
               Compute on Planck
             </span>
-            <span className="text-black font-semibold text-2xl">
+            <span className="text-black font-semibold text-md">
               20+ TB RAM/Memory
             </span>
-            <span className="text-black font-semibold text-2xl">
+            <span className="text-black font-semibold text-md">
               500+ Individual miners in 40 different countries
             </span>
-            <span className="text-black font-semibold text-2xl">
+            <span className="text-black font-semibold text-md">
               300+ Nvidia GPU’s | 1k+ CPU’s
             </span>
           </div>
           <div className="flex gap-3 p-2 flex-col justify-start  pl-3">
-            <span className="text-teal-500 font-bold text-5xl ">
+            <span className="text-teal-500 font-bold text-2xl ">
               Builders on Planck
             </span>
-            <span className="text-black font-semibold text-2xl">
+            <span className="text-black font-semibold text-md">
               50+ AI companies
             </span>
-            <span className="text-black font-semibold text-2xl">
+            <span className="text-black font-semibold text-md">
               5+ AI software development agencies
             </span>
-            <span className="text-black font-semibold text-2xl">
+            <span className="text-black font-semibold text-md">
               2 AI incubators
             </span>
           </div>
@@ -221,19 +218,20 @@ const SecondSection = () => {
       <div className=" w-[90%]  shadow-xl rounded-xl  flex ">
         <div className="bg-[url(/eneterprise2.svg)] bg-white  rounded-s-xl p-5 h-full  bg-no-repeat drop-shadow-2xl w-full bg-cover "></div>
         <div className="bg-[#374151] rounded-e-xl w-[48%] p-8 flex flex-col justify-between gap-10">
-          <div className="flex flex-col gap-10" >
-          <span className="font-bold text-4xl">
-            Enterprise Solutions tailored to your business
-          </span>
-          <span className="text-semibold text-xl">
-            Contact our team for API and infrastructure services customized to
-            your enterprise, or compute
-          </span>
+          <div className="flex flex-col gap-10">
+            <span className="font-bold text-4xl">
+              Enterprise Solutions tailored to your business
+            </span>
+            <span className="text-semibold text-xl">
+              Contact our team for API and infrastructure services customized to
+              your enterprise, or compute
+            </span>
           </div>
-         
+
           <div>
             <Button
-              customClass={"h-[60px] bg-teal-500 justify-center w-[40%]"}
+            className="text-nowrap"
+              customClass={"h-[60px] bg-teal-500 justify-center text-nowrap lg:w-full xl:w-full w-full 2xl:w-[40%]"}
               label="Learn More"
             />
           </div>

@@ -9,7 +9,16 @@ import { MdRocketLaunch } from "react-icons/md";
 import { MdOutlineTravelExplore } from "react-icons/md";
 import { MdMarkChatUnread } from "react-icons/md";
 import { SiGoogledocs } from "react-icons/si";
+import { FaTwitter } from "react-icons/fa";
+import { FaTelegramPlane } from "react-icons/fa";
+import { FaDiscord } from "react-icons/fa";
+import { FaMedium } from "react-icons/fa6";
+import { FaRedditAlien } from "react-icons/fa";
+import { RiInstagramFill } from "react-icons/ri";
+import { FaYoutube } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa";
 import Image from "next/image";
+import { FaArrowRight } from "react-icons/fa";
 
 const MenuBar = () => {
   const [hoveredDropdown, setHoveredDropdown] = useState(null);
@@ -146,7 +155,7 @@ const MenuBar = () => {
             </div>
           </div>
           <div>
-            <Button customClass={"bg-teal-500"} label="Build AI App "></Button>
+            <Button customClass={"bg-[#18aba2]"} label="Build AI App "></Button>
           </div>
         </div>
       </div>
@@ -166,7 +175,7 @@ const MenuBar = () => {
           }`}
         >
           {/* <Button label="close" onClick={() => setSidebar(!sidebar)} /> */}
-          <span className="text-black flex gap-2 items-center  text-xl cursor-pointer hover:text-teal-500 hover:shadow-lg transition-all duration-300  border-b-2 p-1 ">
+          <span className="text-black flex gap-2 items-center text-nowrap  text-xl cursor-pointer hover:text-teal-500 hover:shadow-lg transition-all duration-300  border-b-2 p-1 ">
             <MdDeveloperMode className="h-6 " /> Access Developer Platform{" "}
           </span>
           <span className="text-black text-xl cursor-pointer  flex gap-2 hover:text-teal-500 border-b-2 p-1 items-center hover:shadow-lg transition-all duration-300  ">
@@ -199,78 +208,74 @@ const MenuBar = () => {
         onMouseLeave={() => {
           setProducts(false), setHoveredDropdown(null);
         }}
-        className={`transition-all shadow-lg duration-300 ease-in-out overflow-hidden ${
+        className={`transition-all rounded-b-xl shadow-lg duration-300 ease-in-out overflow-hidden ${
           poducts
-            ? "opacity-100 h-auto bg-white absolute z-20 top-[70px] w-full p-5"
+            ? "opacity-100 h-auto bg-white absolute z-20 top-[70px] w-full p-3"
             : "z-0 absolute top-0 w-full h-0 "
         }`}
       >
         <div className="grid grid-cols-3 w-[90%] m-auto">
-          <div className="div1 hover:bg-gray-100 hover:rounded-lg cursor-pointer hover:shadow-lg p-5 flex items-center gap-4">
+          <div className="div1 hover:bg-gray-100  hover:rounded-lg cursor-pointer hover:shadow-lg p-2 flex items-center gap-4">
             <div>
-              <img src="/mining.svg" width={100} height={80}></img>
+              <img src="/mining.svg" width={70} height={80}></img>
             </div>
             <div>
-              <h1 className="text-black font-semibold text-lg">Mining</h1>
-              <span className="text-gray-500">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.
+              <h1 className="text-black font-semibold text-md">Mining</h1>
+              <span className="text-gray-500 text-sm">
+              Fuel the future of AI by contributing your computing power.
+
               </span>
             </div>
           </div>
-          <div className="div2 hover:bg-gray-100 hover:rounded-lg cursor-pointer hover:shadow-lg p-5 flex items-center gap-4">
+          <div className="div2 hover:bg-gray-100 hover:rounded-lg cursor-pointer hover:shadow-lg p-2 flex items-center gap-4">
             <div>
-              <img src="/mining.svg" width={100} height={80}></img>
+              <img src="/mining.svg" width={70} height={80}></img>
             </div>
             <div>
               {" "}
-              <h1 className="text-black font-semibold text-lg">
+              <h1 className="text-black font-semibold text-md">
                 AI Model APIs
               </h1>
-              <span className="text-gray-500">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.
+              <span className="text-gray-500 text-sm">
+              Access powerful, pre-trained AI models for easy integration.
               </span>
             </div>
           </div>
-          <div className="div3  hover:bg-gray-100 hover:rounded-lg cursor-pointer hover:shadow-lg p-5 flex items-center gap-4">
+          <div className="div3  hover:bg-gray-100 hover:rounded-lg cursor-pointer hover:shadow-lg p-2 flex items-center gap-4">
             <div>
-              <img src="/mining.svg" width={100} height={80}></img>
+              <img src="/mining.svg" width={60} height={80}></img>
             </div>
             <div>
               {" "}
-              <h1 className="text-black font-semibold text-lg">
+              <h1 className="text-black font-semibold text-md">
                 Custom Model Training
               </h1>
-              <span className="text-gray-500">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.
+              <span className="text-gray-500 text-sm">
+              Train your own AI models on the Planck Network.
               </span>
             </div>
           </div>
-          <div className="div4 hover:bg-gray-100 hover:rounded-lg cursor-pointer hover:shadow-lg p-5 flex items-center gap-4">
+          <div className="div4 hover:bg-gray-100 hover:rounded-lg cursor-pointer hover:shadow-lg p-2 flex items-center gap-4">
             <div>
-              <img src="/Plank hub.svg" width={100} height={80}></img>
+              <img src="/Plank hub.svg" width={70} height={80}></img>
             </div>
             <div>
               {" "}
-              <h1 className="text-black font-semibold text-lg">Planck Hub</h1>
-              <span className="text-gray-500">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.
+              <h1 className="text-black font-semibold text-md">Planck Hub</h1>
+              <span className="text-gray-500 text-sm">
+              Shape the network's future through governance and collaboration.
               </span>
             </div>
           </div>
-          <div className="div5 hover:bg-gray-100 hover:rounded-lg cursor-pointer hover:shadow-lg p-5 flex items-center gap-4">
+          <div className="div5 hover:bg-gray-100 hover:rounded-lg cursor-pointer hover:shadow-lg p-2 flex items-center gap-4">
             <div>
-              <img src="/token mint.svg" width={100} height={80}></img>
+              <img src="/token mint.svg" width={60} height={80}></img>
             </div>
             <div>
               {" "}
-              <h1 className="text-black font-semibold text-lg"> Token Mint</h1>
-              <span className="text-gray-500">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.
+              <h1 className="text-black font-semibold text-md">L1 Blockchain for AI</h1>
+              <span className="text-gray-500 text-sm">
+              EVM-Compatible purpose-built blockchain for AI 
               </span>
             </div>
           </div>
@@ -280,41 +285,41 @@ const MenuBar = () => {
         onMouseLeave={() => {
           setPln(false), setHoveredDropdown(null);
         }}
-        className={`transition-all shadow-lg duration-300 ease-in-out overflow-hidden ${
+        className={`transition-all rounded-b-xl shadow-lg duration-300 ease-in-out overflow-hidden ${
           pln
-            ? "opacity-100 h-auto bg-white absolute z-20 top-[70px] w-full p-5"
+            ? "opacity-100 h-auto bg-white absolute z-20 top-[70px] w-full p-3"
             : "z-0 absolute top-0 w-full h-0 "
         }`}
       >
         <div className="grid grid-cols-2 w-[90%] m-auto">
-          <div className="div1 hover:bg-gray-100 hover:rounded-lg cursor-pointer hover:shadow-lg p-5 flex items-center gap-4">
+          <div className="div1 hover:bg-gray-100 hover:rounded-lg cursor-pointer hover:shadow-lg p-2 flex items-center gap-4">
             <div>
-              <img src="/token information.svg" width={100} height={80}></img>
+              <img src="/token information.svg" width={70} height={80}></img>
             </div>
             <div>
-              <h1 className="text-black font-semibold text-lg">
+              <h1 className="text-black font-semibold text-md">
                 Token information
               </h1>
-              <span className="text-gray-500">
+              <span className="text-gray-500 text-sm">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry.
               </span>
             </div>
           </div>
-          <div className="div2 hover:bg-gray-100 hover:rounded-lg cursor-pointer hover:shadow-lg p-5 flex items-center gap-4">
+          <div className="div2 hover:bg-gray-100 hover:rounded-lg cursor-pointer hover:shadow-lg p-2 flex items-center gap-4">
             <div>
               <img
                 src="/PLN earning calculator.svg"
-                width={100}
+                width={70}
                 height={80}
               ></img>
             </div>
             <div>
               {" "}
-              <h1 className="text-black font-semibold text-lg">
+              <h1 className="text-black font-semibold text-md">
                 $PLN earnings calculator
               </h1>
-              <span className="text-gray-500">
+              <span className="text-gray-500 text-sm">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry.
               </span>
@@ -326,38 +331,53 @@ const MenuBar = () => {
         onMouseLeave={() => {
           setComp(false), setHoveredDropdown(null);
         }}
-        className={`transition-all shadow-lg duration-300 ease-in-out overflow-hidden ${
+        className={`transition-all rounded-b-xl shadow-lg duration-300 ease-in-out overflow-hidden ${
           comp
-            ? "opacity-100 h-auto bg-white absolute z-20 top-[70px] w-full p-5"
+            ? "opacity-100 h-auto bg-white absolute z-20 top-[70px] right-10 w-[40%] p-3"
             : "z-0 absolute top-0 w-full h-0 "
         }`}
       >
-        <div className="grid grid-cols-2 w-[90%] m-auto">
-          <div className="div1 hover:bg-gray-100 hover:rounded-lg cursor-pointer hover:shadow-lg p-5 flex items-center gap-4">
+        <div className="flex justify-center " >
+        <div className="flex flex-col w-[65%] border-r-2  ">
+
+          <div className="div1 hover:bg-gray-100 hover:rounded-lg cursor-pointer hover:shadow-lg p-2 flex items-center gap-4">
             <div>
-              <img src="/aboutus.svg" width={80} height={80}></img>
+              <img src="/aboutus.svg" width={50} height={80}></img>
             </div>
             <div>
-              <h1 className="text-black font-semibold text-lg">About Us</h1>
-              <span className="text-gray-500">
+              <h1 className="text-black font-semibold flex gap-3 items-center text-md">About Us<FaArrowRight/></h1>
+              {/* <span className="text-gray-500">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry.
-              </span>
+              </span> */}
             </div>
           </div>
-          <div className="div2 hover:bg-gray-100 hover:rounded-lg cursor-pointer hover:shadow-lg p-5 flex items-center gap-4">
+          <div className="div2 hover:bg-gray-100 hover:rounded-lg cursor-pointer hover:shadow-lg p-2 flex items-center gap-4">
             <div>
-              <img src="/press.svg" width={80} height={80}></img>
+              <img src="/press.svg" width={50} height={80}></img>
             </div>
             <div>
               {" "}
-              <h1 className="text-black font-semibold text-lg">Press</h1>
-              <span className="text-gray-500">
+              <h1 className="text-black font-semibold flex gap-3 items-center text-md">Press<FaArrowRight/></h1>
+              {/* <span className="text-gray-500">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry.
-              </span>
+              </span> */}
             </div>
           </div>
+        </div>
+        <div className="flex flex-col justify-start items-start p-5  w-[40%] gap-2">
+          <h1 className="text-black font-bold text-lg mb-3 ">Socials</h1>
+          <h1 className="text-gray-500  text-base flex gap-2 items-center "><FaTwitter />Twitter</h1>
+          <h1 className="text-gray-500 flex gap-2 items-center text-base"><FaTelegramPlane/>Telegram</h1>
+          <h1 className="text-gray-500 flex gap-2 items-center text-base "><FaDiscord/>Discord</h1>
+          <h1 className="text-gray-500 flex gap-2 items-center text-base "><FaMedium/>Medium</h1>
+          <h1 className="text-gray-500 flex gap-2 items-center text-base "><FaRedditAlien/>Reddit</h1>
+          <h1 className="text-gray-500 flex gap-2 items-center text-baseg "><RiInstagramFill/>Instagram</h1>
+          <h1 className="text-gray-500 flex gap-2 items-center text-baseg "><FaYoutube/>Youtube</h1>
+          <h1 className="text-gray-500 flex gap-2 items-center text-baseg "><FaLinkedinIn/>Linkedin</h1>
+        </div>
+       
         </div>
       </div>
     </>
