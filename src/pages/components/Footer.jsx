@@ -22,27 +22,27 @@ const Footer = () => {
         </div>
         <div className="flex flex-col gap-2">
           <h1 className="text-black font-bold text-lg mb-3 ">Case Studies</h1>
-          <span className="text-gray-500  text-base ">
+          <span className="text-gray-500 hover:text-teal-500  text-base ">
             AI software development agencies
           </span>
-          <span className="text-gray-500  text-base">
+          <span className="text-gray-500 hover:text-teal-500  text-base">
             Software Development Agencies
           </span>
-          <span className="text-gray-500  text-base ">Construction</span>
-          <span className="text-gray-500  text-base ">Chatbots</span>
-          <span className="text-gray-500  text-base ">Content Generation</span>
-          <span className="text-gray-500  text-baseg ">
+          <span className="text-gray-500 hover:text-teal-500  text-base ">Construction</span>
+          <span className="text-gray-500 hover:text-teal-500  text-base ">Chatbots</span>
+          <span className="text-gray-500 hover:text-teal-500  text-base ">Content Generation</span>
+          <span className="text-gray-500  hover:text-teal-500 text-baseg ">
             Business Supply Chains
           </span>
         </div>
         <div className="flex flex-col gap-2">
-          <h1 className="text-black font-bold text-lg mb-3 ">Resources</h1>
-          <span className="text-gray-500  text-base ">Docs</span>
-          <span className="text-gray-500  text-base">Tutorials</span>
-          <span className="text-gray-500  text-base ">Github</span>
-          <span className="text-gray-500  text-base ">Whitepaper</span>
-          <span className="text-gray-500  text-base ">Tokenomics</span>
-          <span className="text-gray-500  text-baseg ">Brand Assets</span>
+          <h1 className="text-black font-bold text-lg mb-3  ">Resources</h1>
+          <span className="text-gray-500  text-base hover:text-teal-500">Docs</span>
+          <span className="text-gray-500  text-base hover:text-teal-500">Tutorials</span>
+          <span className="text-gray-500  text-base hover:text-teal-500">Github</span>
+          <span className="text-gray-500  text-base hover:text-teal-500">Whitepaper</span>
+          <span className="text-gray-500  text-base hover:text-teal-500">Tokenomics</span>
+          <span className="text-gray-500  text-baseg hover:text-teal-500">Brand Assets</span>
         </div>
         <div className="flex flex-col gap-2">
           <h1 className="text-black font-bold text-lg mb-3 ">Company</h1>

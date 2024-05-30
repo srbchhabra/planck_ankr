@@ -6,12 +6,14 @@ module.exports = withMT({
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     "./node_modules/@material-tailwind/react/components/**/*.{js,ts,jsx,tsx}",
-    "./node_modules/@material-tailwind/react/theme/components/**/*.{js,ts,jsx,tsx}"
+    "./node_modules/@material-tailwind/react/theme/components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
-      // fontFamily: {
-      //   sans: ['var(--font-coolvetica)']
+      fontFamily: { nunito: ["Roboto Flex", "sans-serif"] },
+      //   fontFamily: {
+      //     sans: [""Roboto Flex", sans-serif;"],
+      //     // mono: ['var(--font-geist-mono)'],
       // },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

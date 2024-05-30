@@ -49,7 +49,7 @@ const Sectionvideo = () => {
       <div className="relative h-[100vh] bg-[url(/banner.svg)] bg-cover   ">
         {/* Content overlay */}
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white">
-          <h1 className="text-6xl text-black font-bold w-[60%]">
+          <h1 className="text-6xl font-nunito text-black font-semibold w-[60%]">
             <span class="gradient">DePIN</span> leverages millions of devices for 
             <span class="gradient"> affordable </span>
             <span class="gradient">  AI </span>
@@ -57,7 +57,7 @@ const Sectionvideo = () => {
            
           </h1>
           <div className="mt-[100px] xl:mt-[200px]">
-            <span className=" text-black font-semibold text-lg">
+            <span className=" text-black font-nunito font-semibold text-lg">
               Trusted by the best in business and blockchain
             </span>
           </div>

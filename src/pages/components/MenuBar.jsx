@@ -59,7 +59,7 @@ const MenuBar = () => {
               // onMouseLeave={() => setHoveredDropdown(null)}
             >
               <span
-                className={`text-black font-semibold ${
+                className={`text-black font-nunito font-semibold ${
                   hoveredDropdown == "products" && "text-teal-300"
                 } `}
               >
@@ -81,7 +81,7 @@ const MenuBar = () => {
               // onMouseLeave={() => setHoveredDropdown(null)}
             >
               <span
-                className={`text-black font-semibold ${
+                className={`text-black font-nunito font-semibold ${
                   hoveredDropdown == "pln" && "text-teal-300"
                 } `}
               >
@@ -105,7 +105,7 @@ const MenuBar = () => {
               }}
               onMouseLeave={() => setHoveredDropdown(null)}
             >
-              <span className="text-black font-semibold hover:text-teal-300">
+              <span className="text-black font-nunito font-semibold hover:text-teal-300">
                 Resources
               </span>
               {/* <FaAngleDown
@@ -127,7 +127,7 @@ const MenuBar = () => {
               // onMouseLeave={() => setHoveredDropdown(null)}
             >
               <span
-                className={`text-black font-semibold ${
+                className={`text-black font-nunito font-semibold ${
                   hoveredDropdown == "company" && "text-teal-300"
                 } `}
               >
@@ -146,7 +146,7 @@ const MenuBar = () => {
               onMouseEnter={() => setHoveredDropdown("menu")}
               onMouseLeave={() => setHoveredDropdown(null)}
             >
-              <span className="text-black font-semibold">Blog</span>
+              <span className="text-black font-semibold font-nunito">Blog</span>
               {/* <FaAngleDown
               className={`text-black transform ${
                 hoveredDropdown === "menu" ? "rotate-180 transition duration-300" : "transition duration-300"
@@ -175,22 +175,22 @@ const MenuBar = () => {
           }`}
         >
           {/* <Button label="close" onClick={() => setSidebar(!sidebar)} /> */}
-          <span className="text-black flex gap-2 items-center text-nowrap  text-xl cursor-pointer hover:text-teal-500 hover:shadow-lg transition-all duration-300  border-b-2 p-1 ">
+          <span className="text-black flex gap-2 font-nunito items-center text-nowrap  text-xl cursor-pointer hover:text-teal-500 hover:shadow-lg transition-all duration-300  border-b-2 p-1 ">
             <MdDeveloperMode className="h-6 " /> Access Developer Platform{" "}
           </span>
-          <span className="text-black text-xl cursor-pointer  flex gap-2 hover:text-teal-500 border-b-2 p-1 items-center hover:shadow-lg transition-all duration-300  ">
+          <span className="text-black text-xl cursor-pointer font-nunito  flex gap-2 hover:text-teal-500 border-b-2 p-1 items-center hover:shadow-lg transition-all duration-300  ">
             <IoMdDownload /> Download Mining App
           </span>
-          <span className="text-black  flex gap-2 items-center text-xl cursor-pointer hover:text-teal-500 border-b-2 p-1 hover:shadow-lg transition-all duration-300 ">
+          <span className="text-black font-nunito flex gap-2 items-center text-xl cursor-pointer hover:text-teal-500 border-b-2 p-1 hover:shadow-lg transition-all duration-300 ">
             <MdRocketLaunch /> Launch Planck Hub{" "}
           </span>
-          <span className="text-black  flex gap-2 items-center text-xl cursor-pointer hover:text-teal-500 border-b-2 p-1 hover:shadow-lg transition-all duration-300  ">
+          <span className="text-black font-nunito flex gap-2 items-center text-xl cursor-pointer hover:text-teal-500 border-b-2 p-1 hover:shadow-lg transition-all duration-300  ">
             <MdOutlineTravelExplore /> Visit Block Explorer{" "}
           </span>
-          <span className="text-black  flex gap-2 items-center  text-xl cursor-pointer hover:text-teal-500 border-b-2 p-1 hover:shadow-lg transition-all duration-300  ">
+          <span className="text-black font-nunito flex gap-2 items-center  text-xl cursor-pointer hover:text-teal-500 border-b-2 p-1 hover:shadow-lg transition-all duration-300  ">
             <MdMarkChatUnread /> Read Tokenomics
           </span>
-          <span className="text-black  flex gap-2 items-center  text-xl cursor-pointer hover:text-teal-500 border-b-2 p-1 hover:shadow-lg transition-all duration-300 ">
+          <span className="text-black font-nunito flex gap-2 items-center  text-xl cursor-pointer hover:text-teal-500 border-b-2 p-1 hover:shadow-lg transition-all duration-300 ">
             <SiGoogledocs /> Read Docs{" "}
           </span>
         </div>
@@ -220,8 +220,8 @@ const MenuBar = () => {
               <img src="/mining.svg" width={70} height={80}></img>
             </div>
             <div>
-              <h1 className="text-black font-semibold text-md">Mining</h1>
-              <span className="text-gray-500 text-sm">
+              <h1 className="text-black font-semibold text-md font-nunito">Mining</h1>
+              <span className="text-gray-500 text-sm font-nunito">
               Fuel the future of AI by contributing your computing power.
 
               </span>
@@ -233,10 +233,10 @@ const MenuBar = () => {
             </div>
             <div>
               {" "}
-              <h1 className="text-black font-semibold text-md">
+              <h1 className="text-black font-semibold font-nunito text-md">
                 AI Model APIs
               </h1>
-              <span className="text-gray-500 text-sm">
+              <span className="text-gray-500 text-sm font-nunito">
               Access powerful, pre-trained AI models for easy integration.
               </span>
             </div>
@@ -247,22 +247,22 @@ const MenuBar = () => {
             </div>
             <div>
               {" "}
-              <h1 className="text-black font-semibold text-md">
+              <h1 className="text-black font-semibold text-md font-nunito">
                 Custom Model Training
               </h1>
-              <span className="text-gray-500 text-sm">
+              <span className="text-gray-500 text-sm font-nunito">
               Train your own AI models on the Planck Network.
               </span>
             </div>
           </div>
           <div className="div4 hover:bg-gray-100 hover:rounded-lg cursor-pointer hover:shadow-lg p-2 flex items-center gap-4">
             <div>
-              <img src="/Plank hub.svg" width={70} height={80}></img>
+              <img src="/planck hub.svg" width={70} height={80}></img>
             </div>
             <div>
               {" "}
-              <h1 className="text-black font-semibold text-md">Planck Hub</h1>
-              <span className="text-gray-500 text-sm">
+              <h1 className="text-black font-semibold text-md font-nunito">Planck Hub</h1>
+              <span className="text-gray-500 text-sm font-nunito">
               Shape the network's future through governance and collaboration.
               </span>
             </div>
@@ -273,8 +273,8 @@ const MenuBar = () => {
             </div>
             <div>
               {" "}
-              <h1 className="text-black font-semibold text-md">L1 Blockchain for AI</h1>
-              <span className="text-gray-500 text-sm">
+              <h1 className="text-black font-semibold text-md font-nunito">L1 Blockchain for AI</h1>
+              <span className="text-gray-500 text-sm font-nunito">
               EVM-Compatible purpose-built blockchain for AI 
               </span>
             </div>
@@ -297,10 +297,10 @@ const MenuBar = () => {
               <img src="/token information.svg" width={70} height={80}></img>
             </div>
             <div>
-              <h1 className="text-black font-semibold text-md">
+              <h1 className="text-black font-semibold text-md font-nunito">
                 Token information
               </h1>
-              <span className="text-gray-500 text-sm">
+              <span className="text-gray-500 text-sm font-nunito">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry.
               </span>
@@ -316,10 +316,10 @@ const MenuBar = () => {
             </div>
             <div>
               {" "}
-              <h1 className="text-black font-semibold text-md">
+              <h1 className="text-black font-semibold text-md font-nunito">
                 $PLN earnings calculator
               </h1>
-              <span className="text-gray-500 text-sm">
+              <span className="text-gray-500 text-sm font-nunito">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry.
               </span>
@@ -342,10 +342,10 @@ const MenuBar = () => {
 
           <div className="div1 hover:bg-gray-100 hover:rounded-lg cursor-pointer hover:shadow-lg p-2 flex items-center gap-4">
             <div>
-              <img src="/aboutus.svg" width={50} height={80}></img>
+              <img src="/about us.svg" width={50} height={80}></img>
             </div>
             <div>
-              <h1 className="text-black font-semibold flex gap-3 items-center text-md">About Us<FaArrowRight/></h1>
+              <h1 className="text-black font-semibold flex gap-3 items-center font-nunito text-md">About Us<FaArrowRight/></h1>
               {/* <span className="text-gray-500">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry.
@@ -354,11 +354,11 @@ const MenuBar = () => {
           </div>
           <div className="div2 hover:bg-gray-100 hover:rounded-lg cursor-pointer hover:shadow-lg p-2 flex items-center gap-4">
             <div>
-              <img src="/press.svg" width={50} height={80}></img>
+              <img src="/press release.svg" width={50} height={80}></img>
             </div>
             <div>
               {" "}
-              <h1 className="text-black font-semibold flex gap-3 items-center text-md">Press<FaArrowRight/></h1>
+              <h1 className="text-black font-semibold flex gap-3 items-center font-nunito text-md">Press<FaArrowRight/></h1>
               {/* <span className="text-gray-500">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry.
@@ -367,7 +367,7 @@ const MenuBar = () => {
           </div>
         </div>
         <div className="flex flex-col justify-start items-start p-5  w-[40%] gap-2">
-          <h1 className="text-black font-bold text-lg mb-3 ">Socials</h1>
+          <h1 className="text-black font-semibold text-md mb-3 font-nunito ">Socials</h1>
           <h1 className="text-gray-500  text-base flex gap-2 items-center "><FaTwitter />Twitter</h1>
           <h1 className="text-gray-500 flex gap-2 items-center text-base"><FaTelegramPlane/>Telegram</h1>
           <h1 className="text-gray-500 flex gap-2 items-center text-base "><FaDiscord/>Discord</h1>

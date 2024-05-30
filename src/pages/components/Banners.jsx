@@ -20,10 +20,10 @@ const Banner = ({ images, speed }) => {
   };
 
   const imageStyle = {
-    height: '150px',  // Fixed height
+    height: '200px',  // Fixed height
     width: '200px',   // Fixed width
     objectFit: 'contain',
-    aspectRatio:'3/2',
+    aspectRatio:'4/2',
      // Maintain aspect ratio
    // Optional padding
   };
