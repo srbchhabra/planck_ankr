@@ -2,6 +2,8 @@ import React from "react";
 import { TbBrandShopee } from "react-icons/tb";
 import Banner from "./Banners";
 import { GrMoney } from "react-icons/gr";
+import Button from "./Button";
+import { motion } from "framer-motion"
 const Sectionvideo = () => {
   const images = [
     "Arcanum.svg",
@@ -46,26 +48,27 @@ const Sectionvideo = () => {
   }));
   return (
     <>
-      <div className="relative h-[100vh] bg-[url(/banner.svg)] bg-cover   ">
+      <div className="relative h-[120vh] bg-[url(/globeglobe.png)] bg-contain bg-no-repeat ">
+        <div>
         {/* Content overlay */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white">
-          <h1 className="text-6xl font-nunito text-black font-semibold w-[60%]">
-            <span class="gradient">DePIN</span> leverages millions of devices for 
-            <span class="gradient"> affordable </span>
-            <span class="gradient">  AI </span>
-            <span class="gradient"> processing</span>
-           
+        <motion.div initial={{opacity:0,y:500}} whileInView={{opacity:1, y: 0}} transition={{duration:1}}  className="absolute w-full  inset-0 flex flex-col items-center bg-cover  text-center text-white">
+          <h1 className="text-5xl absolute top-[20%] font-nunito text-white font-semibold w-full xl:w-[80%] 2xl:w-[60%] h-full pt-32 ">
+            <span class="">DePIN</span> leverages millions of devices for 
+            <span class=""> affordable </span>
+            <span class=""> AI </span>
+            <span class=""> processing</span>
+            <div className="flex w-full justify-center mt-10 gap-5 " >
+            <Button label="Get Started" ></Button>
+            <Button label="Learn More" ></Button>
+            </div>
           </h1>
-          <div className="mt-[100px] xl:mt-[200px]">
-            <span className=" text-black font-nunito font-semibold text-lg">
-              Trusted by the best in business and blockchain
-            </span>
-          </div>
+       
+        </motion.div>
         </div>
 
-        <div className="absolute bottom-0  w-full overflow-hidden mb-24">
+     {/* <div className=" bottom-0  w-full overflow-hidden mb-24">
           <Banner images={images} speed={20000} />
-        </div>
+        </div>  */}
       </div>
     </>
   );

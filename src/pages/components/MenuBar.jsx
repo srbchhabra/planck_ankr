@@ -29,21 +29,21 @@ const MenuBar = () => {
 
   return (
     <>
-      <div className="bg-white shadow-xl  sticky top-0 w-full z-10">
+      <div className=" myshadow bg-transparent bg-[url(/Backgroundimage.png)] bg-contain  w-[80%]  m-auto rounded-full z-10">
         {/* <div className="bg-black p-[1px] text-center " ><span className="text-white font-medium text-center" >Planck Incentivized Testnet Is Live | Download Mining App Now</span></div> */}
         <div className="flex justify-between p-3">
           <div className="flex gap-10 items-center">
             {sidebar ? (
               <RxCross1
                 onClick={() => setSidebar(!sidebar)}
-                className="text-black  text-2xl cursor-pointer "
+                className="text-white  text-2xl cursor-pointer "
               />
             ) : (
               <TbGridDots
                 onClick={() => setSidebar(!sidebar)}
                 className={`${
                   sidebar ? "rotate-90 transition-all" : ""
-                }text-black text-2xl cursor-pointer `}
+                }text-white text-2xl cursor-pointer `}
               />
             )}
             <Image src={"/logo-cropped.svg"} height={50} width={100}></Image>
@@ -59,14 +59,14 @@ const MenuBar = () => {
               // onMouseLeave={() => setHoveredDropdown(null)}
             >
               <span
-                className={`text-black font-nunito font-semibold ${
+                className={`text-white font-nunito font-semibold ${
                   hoveredDropdown == "products" && "text-teal-300"
                 } `}
               >
                 Products
               </span>
               <FaAngleDown
-                className={`text-black transform ${
+                className={`text-white transform ${
                   hoveredDropdown === "products"
                     ? "rotate-180 transition duration-300"
                     : "transition duration-300"
@@ -81,14 +81,14 @@ const MenuBar = () => {
               // onMouseLeave={() => setHoveredDropdown(null)}
             >
               <span
-                className={`text-black font-nunito font-semibold ${
+                className={`text-white font-nunito font-semibold ${
                   hoveredDropdown == "pln" && "text-teal-300"
                 } `}
               >
                 $PLN Token
               </span>
               <FaAngleDown
-                className={`text-black transform ${
+                className={`text-white transform ${
                   hoveredDropdown === "pln"
                     ? "rotate-180 transition duration-300"
                     : "transition duration-300"
@@ -105,7 +105,7 @@ const MenuBar = () => {
               }}
               onMouseLeave={() => setHoveredDropdown(null)}
             >
-              <span className="text-black font-nunito font-semibold hover:text-teal-300">
+              <span className="text-white font-nunito font-semibold hover:text-teal-300">
                 Resources
               </span>
               {/* <FaAngleDown
@@ -127,14 +127,14 @@ const MenuBar = () => {
               // onMouseLeave={() => setHoveredDropdown(null)}
             >
               <span
-                className={`text-black font-nunito font-semibold ${
+                className={`text-white font-nunito font-semibold ${
                   hoveredDropdown == "company" && "text-teal-300"
                 } `}
               >
                 Company
               </span>
               <FaAngleDown
-                className={`text-black transform ${
+                className={`text-white transform ${
                   hoveredDropdown === "company"
                     ? "rotate-180 transition duration-300"
                     : "transition duration-300"
@@ -146,7 +146,7 @@ const MenuBar = () => {
               onMouseEnter={() => setHoveredDropdown("menu")}
               onMouseLeave={() => setHoveredDropdown(null)}
             >
-              <span className="text-black font-semibold font-nunito">Blog</span>
+              <span className="text-white font-semibold font-nunito">Blog</span>
               {/* <FaAngleDown
               className={`text-black transform ${
                 hoveredDropdown === "menu" ? "rotate-180 transition duration-300" : "transition duration-300"
@@ -243,7 +243,7 @@ const MenuBar = () => {
           </div>
           <div className="div3  hover:bg-gray-100 hover:rounded-lg cursor-pointer hover:shadow-lg p-2 flex items-center gap-4">
             <div>
-              <img src="/mining.svg" width={60} height={80}></img>
+              <img src="/mining.svg" width={70} height={80}></img>
             </div>
             <div>
               {" "}
@@ -257,7 +257,7 @@ const MenuBar = () => {
           </div>
           <div className="div4 hover:bg-gray-100 hover:rounded-lg cursor-pointer hover:shadow-lg p-2 flex items-center gap-4">
             <div>
-              <img src="/planck hub.svg" width={70} height={80}></img>
+              <img className="object-cover w-20 h-auto" src="/planck hub.svg" ></img>
             </div>
             <div>
               {" "}
@@ -269,7 +269,7 @@ const MenuBar = () => {
           </div>
           <div className="div5 hover:bg-gray-100 hover:rounded-lg cursor-pointer hover:shadow-lg p-2 flex items-center gap-4">
             <div>
-              <img src="/token mint.svg" width={60} height={80}></img>
+              <img className="object-contain w-16 h-auto" src="/token mint.svg" ></img>
             </div>
             <div>
               {" "}

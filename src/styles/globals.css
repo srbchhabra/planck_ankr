@@ -138,3 +138,15 @@ section {
     transform: translateX(-100%);
   }
 }
+
+.customg{
+  background: rgb(41,41,41);
+  background: linear-gradient(180deg, rgba(41,41,41,1) 0%, rgba(255,255,255,1) 91%);
+}
+.myshadow{
+  box-shadow: inset gray 0px 1px 6px 0px;
+}
+
+.myline{
+  background: linear-gradient(to right, transparent, 10%, white, 90%, transparent)
+}

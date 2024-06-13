@@ -5,12 +5,40 @@ import { DiAndroid } from "react-icons/di";
 import { FaWindows } from "react-icons/fa";
 import { FaApple } from "react-icons/fa6";
 import { IoMdDownload } from "react-icons/io";
+import { RiExternalLinkFill } from "react-icons/ri";
+import { easeIn, motion } from "framer-motion";
+
 const SecondSection = () => {
   return (
-    <div className="flex flex-col  justify-center items-center">
-      <div className="bg-white rounded-2xl  shadow-2xl relative top-[-100px] w-[90%] ">
-        <div className="grid grid-cols-12  ">
-          <div className="col-span-4 h-full p-9 ">
+    <div className="flex flex-col bg-[url(/Backgroundimage.png)] w-full gap-10 justify-center items-center">
+      <div className="w-full flex justify-center  text-center mt-10">
+        <div className="flex w-[75%]  gap-5 items-center text-center justify-center">
+          <hr className="w-full h-2 myline  "></hr>
+          <h1 className="text-nowrap">
+            Trusted by the best in Business and Blockchain
+          </h1>
+          <hr className="w-full h-2"></hr>
+        </div>
+      </div>
+      <motion.div
+        initial={{ opacity: 0, y: 250 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="bg-[url(/Backgroundimage.png)]  shadow-gray-700  rounded-2xl shadow-inner  w-[90%] "
+      >
+        <div className="grid grid-cols-12 p-36 ">
+          <motion.div
+              initial={{ scale: 2 }}
+              whileInView={{ scale: 1 }}
+              transition={{type:"spring", duration: 0.6 }} className="col-span-5 h-full  ">
+            <img
+              className="object-contain "
+              src="/cross.png"
+              height={500}
+              width={300}
+            ></img>
+          </motion.div>
+          <div className="col-span-7  h-full w-full ">
             <div className="mb-5 flex  items-center justify-start gap-3">
               {" "}
               <img
@@ -19,27 +47,39 @@ const SecondSection = () => {
                 width={50}
                 height={80}
               />{" "}
-              <span className="text-teal-500 font-nunito text-3xl font-semibold ">
+              <span className="text-white font-nunito text-5xl font-semibold ">
                 {" "}
                 AI Model APIs
               </span>
             </div>
 
-            <span className="text-black font-nunito text-4xl font-bold w-full ">
+            <span className="text-[#6F6F6F] font-nunito text-4xl font-bold w-full ">
               {" "}
               The industries leading open-source AI models
             </span>
-            <div className="flex flex-col items-start p-0 mt-5">
-              <ul className=" text-black font-nunito font-semibold ">
-                <li>No up-front costs</li>
-                <li>No vendor lock-in</li>
-                <li>Automatic scaling </li>
-                <li>Low computation prices based on API calls</li>
-              </ul>
+            <div className="grid grid-cols-2 gap-5 items-start p-0 mt-5">
+              <div className="flex items-center gap-2 border-l-2 pl-4 ">
+                <RiExternalLinkFill className="h-9 w-9 border rounded-lg p-2" />
+                <span>No up-front costs</span>
+              </div>
+              <div className="flex items-center gap-2 border-l-2 pl-4 ">
+                <RiExternalLinkFill className="h-9 w-9 border rounded-lg p-2" />
+                <span>No vendor lock-in</span>
+              </div>
+              <div className="flex items-center gap-2 border-l-2 pl-4 ">
+                <RiExternalLinkFill className="h-9 w-9 border rounded-lg p-2" />
+                <span>Automatic scaling </span>
+              </div>
+              <div className="flex items-center gap-2 border-l-2 pl-4 ">
+                <RiExternalLinkFill className="h-9 w-9 border rounded-lg p-2" />
+                <span>Low computation prices based on API calls</span>
+              </div>
             </div>
             <div className="flex w-full gap-10 mt-10">
               <Button
-                customClass={"h-[60px] text-nowrap justify-center w-full"}
+                customClass={
+                  "h-[60px] bg-teal-500 text-nowrap justify-center w-full"
+                }
                 label="Start for Free"
               />
               <Button
@@ -48,43 +88,54 @@ const SecondSection = () => {
               />
             </div>
           </div>
-          <div className="col-span-8  h-full w-full ">
-            <img
-              className="customimage m-auto object-cover w-full h-full ml-[-150px] mt-10 "
-              src="/circle.svg"
-              height={500}
-              width={800}
-            ></img>
-          </div>
         </div>
-      </div>
-      <div className="  mt-[-50px] flex gap-10 justify-center w-[90%]">
-        <div className="rounded-2xl p-10 w-full  bg-white flex flex-col justify-between gap-5 shadow-xl ">
-          <div className="mb-2 flex  items-center justify-start gap-3">
+      </motion.div>
+      <div className="bg-[url(/circleneon.png)] absolute top-[200%] bg-no-repeat  w-full h-[90vh] bg-contain "></div>
+      <div className=" flex gap-10 justify-center w-[90%]">
+        <motion.div
+          initial={{ opacity: 0, x: -500 }}
+          // viewport={{ once: true }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{type:"spring", duration: 0.6 }}
+          className="rounded-2xl p-10 w-full shadow-inner bg-[url(/Backgroundimage.png)]  shadow-gray-700 bg-transparent flex flex-col justify-between gap-5  "
+        >
+          <div className="mb-2 flex   items-center justify-between gap-3">
             {" "}
-            <img className="p-1" src="/mining.svg" width={50} height={80} />
-            <span className="text-teal-500 font-nunito text-3xl font-semibold ">
-              {" "}
-              Mining
-            </span>
+            <div className="flex items-center gap-4">
+              <img className="p-1" src="/mining.svg" width={50} height={80} />
+              <span className="text-white shadow-inner  font-nunito text-3xl font-semibold ">
+                {" "}
+                Mining
+              </span>
+            </div>
+            <div className="flex gap-3 items-center">
+              <FaWindows className="text-white text-3xl " />
+              <DiAndroid className="text-white text-3xl " />
+              <FaApple className="text-white text-4xl " />
+            </div>
           </div>
           <div className="flex flex-col">
-            <span className="text-black text-4xl font-nunito font-bold ">
+            <span className="text-[#6F6F6F] text-4xl font-nunito font-bold ">
               {" "}
-              The world’s simplest mining app 
+              The world’s simplest mining app
             </span>
-            <div className="flex flex-col mt-5">
-              <ul className=" text-black font-nunito font-semibold">
-                <li>No technical skills or crypto knowledge required</li>
-                <li>PlanckOS for unmatched security</li>
-                <li>Flexible configuration settings </li>
-                <li>Download app and start earning $PLN</li>
-              </ul>
-            </div>
-            <div className="flex gap-3 mt-5 items-center">
-              <FaWindows className="text-blue-500 text-3xl " />
-              <DiAndroid className="text-green-500 text-3xl " />
-              <FaApple className="text-black text-4xl " />
+            <div className="grid grid-cols-2 gap-5 items-start p-0 mt-5">
+              <div className="flex items-center gap-2 border-l-2 pl-4 ">
+                <RiExternalLinkFill className="h-9 w-9 border rounded-lg p-2" />
+                <span>No Tech Skills</span>
+              </div>
+              <div className="flex items-center gap-2 border-l-2 pl-4 ">
+                <RiExternalLinkFill className="h-9 w-9 border rounded-lg p-2" />
+                <span>Flexible Configurations</span>
+              </div>
+              <div className="flex items-center gap-2 border-l-2 pl-4 ">
+                <RiExternalLinkFill className="h-9 w-9 border rounded-lg p-2" />
+                <span>Planck OS for Security</span>
+              </div>
+              <div className="flex items-center gap-2 border-l-2 pl-4 ">
+                <RiExternalLinkFill className="h-9 w-9 border rounded-lg p-2" />
+                <span>Download App</span>
+              </div>
             </div>
           </div>
           <div className="flex w-full gap-10 mt-10">
@@ -98,8 +149,14 @@ const SecondSection = () => {
               label="Learn More"
             />
           </div>
-        </div>
-        <div className="rounded-2xl p-10 w-full  bg-white flex flex-col justify-between gap-5 shadow-xl ">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, x: 500 }}
+          viewport={{ once: true }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+          className="rounded-2xl p-10 w-full shadow-inner bg-[url(/Backgroundimage.png)]  shadow-gray-700 bg-transparent flex flex-col justify-between gap-5  "
+        >
           <div className="mb-5 flex  items-center justify-start gap-3">
             {" "}
             <img
@@ -108,27 +165,31 @@ const SecondSection = () => {
               width={50}
               height={80}
             />{" "}
-            <span className="text-teal-500 font-nunito text-3xl font-semibold ">
+            <span className="text-white font-nunito text-3xl font-semibold ">
               {" "}
               Custom Model Training
             </span>
           </div>
           <div className="flex flex-col w-full">
-            <span className="text-black text-4xl font-bold font-nunito w-full ">
+            <span className="text-[#6F6F6F] text-4xl font-bold font-nunito w-full ">
               {" "}
               End-to-end ML infrastructure for efficient training of custom
               models
             </span>
-            <div className="flex flex-col mt-5">
-              <ul className=" text-black font-nunito font-semibold ">
-                <li>Easily deploy custom model on Planck networkd</li>
-                <li>Low-cost compute that scales to meet your goals</li>
-              </ul>
+            <div className="flex gap-5 mt-5">
+              <div className="flex items-center gap-2 border-l-2 pl-4 ">
+                <RiExternalLinkFill className="h-9 w-9 border rounded-lg p-2" />
+                <span>Easily deploy custom model on Planck networkd</span>
+              </div>
+              <div className="flex items-center gap-2 border-l-2 pl-4 ">
+                <RiExternalLinkFill className="h-9 w-9 border rounded-lg p-2" />
+                <span>Low-cost compute that scales to meet your goals</span>
+              </div>
             </div>
           </div>
           <div className="flex w-full gap-10 mt-10">
             <Button
-              customClass={"h-[60px] justify-center w-full"}
+              customClass={"h-[60px] bg-teal-500 justify-center w-full"}
               label="Start fo Free"
             />
             <Button
@@ -136,22 +197,21 @@ const SecondSection = () => {
               label="Learn More"
             />
           </div>
-        </div>
+        </motion.div>
       </div>
-      <div className="rounded-2xl w-[90%] bg-[url(/neura.svg)] bg-white  bg-cover p-5 mt-10 shadow-2xl ">
+      <div className="rounded-2xl w-[90%] p-5 mt-10 shadow-2xl ">
         <div className="flex flex-col w-[50%] gap-5">
-          
-          <span className="text-5xl font-bold font-nunito text-black">
-            The blockchain built for AI inferencing
+          <span className="text-5xl font-semibold font-nunito text-white">
+            The Blockchain Built for AI Inferencing
           </span>
-          <span className="text-lg font-medium font-nunito text-black ">
+          <span className="text-lg font-medium font-nunito text-white ">
             Our unique blockchain architecture with zkVMs and PoUW to keep the
             computational intense processing off-chain for high throughput,
             scalability and efficiency purpose-build for AI processing.
           </span>
           <div className="flex w-full gap-10 mt-10">
             <Button
-              customClass={"h-[60px] justify-center w-full"}
+              customClass={"h-[60px] bg-teal-300 justify-center w-full"}
               label="Start fo Free"
             />
             <Button
@@ -161,7 +221,7 @@ const SecondSection = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col gap-5 items-center text-center mt-[100px]">
+      {/* <div className="flex flex-col gap-5 items-center text-center mt-[100px]">
         <div className="w-[60%] flex flex-col gap-11">
           <span className="text-black font-nunito font-bold text-6xl ">
             A DePIN ready for mass-adoption.
@@ -204,17 +264,19 @@ const SecondSection = () => {
               2 AI incubators
             </span>
           </div>
-          {/* <div className="flex gap-3 p-2 flex-col justify-start border-r-2 pl-3">
-            <span className="text-black font-bold text-5xl ">760k</span>
-            <span className="text-black font-semibold text-2xl">
-              Unique geo locations served monthly
-            </span>
-          </div> */}
+       
         </div>
-      </div>
-      <div>
+      </div> */}
+      {/* <div>
         <img className="w-full drop-shadow-xl " src="/globe.svg"></img>
+      </div> */}
+      <div className="">
+        {" "}
+        <video className="videoTag" autoPlay loop muted>
+          <source src={"/Planckvdo.mp4"} type="video/mp4" />
+        </video>
       </div>
+
       <div className=" w-[90%]  shadow-xl rounded-xl  flex ">
         <div className="bg-[url(/eneterprise2.svg)] bg-white  rounded-s-xl p-5 h-full  bg-no-repeat drop-shadow-2xl w-full bg-cover "></div>
         <div className="bg-[#374151] rounded-e-xl w-[48%] p-8 flex flex-col justify-between gap-10">
@@ -230,8 +292,10 @@ const SecondSection = () => {
 
           <div>
             <Button
-            className="text-nowrap"
-              customClass={"h-[60px] bg-teal-500 justify-center text-nowrap lg:w-full xl:w-full w-full 2xl:w-[40%]"}
+              className="text-nowrap"
+              customClass={
+                "h-[60px] bg-teal-500 justify-center text-nowrap lg:w-full xl:w-full w-full 2xl:w-[40%]"
+              }
               label="Learn More"
             />
           </div>
