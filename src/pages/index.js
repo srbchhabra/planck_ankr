@@ -7,7 +7,7 @@ import Sectionvideo from "./components/Sectionvideo";
 
 export default function Home() {
   return (
-    <div className="bg-black h-full w-full">
+    <div className="bg-black h-full w-full overflow-hidden ">
       <div className="  relative top-5 z-10">
         <MenuBar />
       </div>

@@ -7,30 +7,43 @@ import { FaApple } from "react-icons/fa6";
 import { IoMdDownload } from "react-icons/io";
 import { RiExternalLinkFill } from "react-icons/ri";
 import { easeIn, motion } from "framer-motion";
+import { RiVipCrown2Line } from "react-icons/ri";
+import { FaUserCheck } from "react-icons/fa";
 
 const SecondSection = () => {
   return (
     <div className="flex flex-col bg-[url(/Backgroundimage.png)] w-full gap-10 justify-center items-center">
-      <div className="w-full flex justify-center  text-center mt-10">
+      <div className="w-full flex flex-col items-center justify-center  text-center mt-10">
         <div className="flex w-[75%]  gap-5 items-center text-center justify-center">
-          <hr className="w-full h-2 myline  "></hr>
+          <hr className="w-full h-2   "></hr>
           <h1 className="text-nowrap">
             Trusted by the best in Business and Blockchain
           </h1>
           <hr className="w-full h-2"></hr>
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 250 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          className="w-full flex justify-center"
+        >
+          <Image src="/logosimage.png" width={950} height={500}></Image>
+        </motion.div>
       </div>
       <motion.div
         initial={{ opacity: 0, y: 250 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
+        transition={{ duration: 1 }}
         className="bg-[url(/Backgroundimage.png)]  shadow-gray-700  rounded-2xl shadow-inner  w-[90%] "
       >
         <div className="grid grid-cols-12 p-36 ">
           <motion.div
-              initial={{ scale: 2 }}
-              whileInView={{ scale: 1 }}
-              transition={{type:"spring", duration: 0.6 }} className="col-span-5 h-full  ">
+            initial={{ scale: 2 }}
+            whileInView={{ scale: 1 }}
+            transition={{ type: "spring", duration: 0.6 }}
+            className="col-span-5 h-full  "
+          >
             <img
               className="object-contain "
               src="/cross.png"
@@ -96,7 +109,7 @@ const SecondSection = () => {
           initial={{ opacity: 0, x: -500 }}
           // viewport={{ once: true }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{type:"spring", duration: 0.6 }}
+          transition={{ type: "spring", duration: 2 }}
           className="rounded-2xl p-10 w-full shadow-inner bg-[url(/Backgroundimage.png)]  shadow-gray-700 bg-transparent flex flex-col justify-between gap-5  "
         >
           <div className="mb-2 flex   items-center justify-between gap-3">
@@ -152,9 +165,9 @@ const SecondSection = () => {
         </motion.div>
         <motion.div
           initial={{ opacity: 0, x: 500 }}
-          viewport={{ once: true }}
+          // viewport={{ once: true }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ type: "spring", duration: 2 }}
           className="rounded-2xl p-10 w-full shadow-inner bg-[url(/Backgroundimage.png)]  shadow-gray-700 bg-transparent flex flex-col justify-between gap-5  "
         >
           <div className="mb-5 flex  items-center justify-start gap-3">
@@ -199,12 +212,18 @@ const SecondSection = () => {
           </div>
         </motion.div>
       </div>
-      <div className="rounded-2xl w-[90%] p-5 mt-10 shadow-2xl ">
+      <motion.div
+        initial={{ opacity: 0, x: 500 }}
+        // viewport={{ once: true }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ type: "spring", duration: 2 }}
+        className="rounded-2xl w-[90%] p-5 mt-10 shadow-2xl "
+      >
         <div className="flex flex-col w-[50%] gap-5">
-          <span className="text-5xl font-semibold font-nunito text-white">
+          <span className="text-6xl font-semibold font-nunito text-white">
             The Blockchain Built for AI Inferencing
           </span>
-          <span className="text-lg font-medium font-nunito text-white ">
+          <span className="text-xl font-medium font-nunito text-[#676767] ">
             Our unique blockchain architecture with zkVMs and PoUW to keep the
             computational intense processing off-chain for high throughput,
             scalability and efficiency purpose-build for AI processing.
@@ -220,7 +239,7 @@ const SecondSection = () => {
             />
           </div>
         </div>
-      </div>
+      </motion.div>
       {/* <div className="flex flex-col gap-5 items-center text-center mt-[100px]">
         <div className="w-[60%] flex flex-col gap-11">
           <span className="text-black font-nunito font-bold text-6xl ">
@@ -276,30 +295,22 @@ const SecondSection = () => {
           <source src={"/Planckvdo.mp4"} type="video/mp4" />
         </video>
       </div>
+      <div>
+        <span className="text-4xl">PLANCK FOR </span>{" "}
+        <span className="text-teal-400 text-4xl ">MINERS</span>
+      </div>
+      <div className="w-[90%] grid grid-cols-12 gap-6 ">
+      <div className="rounded-2xl p-10 w-full col-span-7 h-[500px] shadow-inner bg-[url(/pro.png)]  shadow-gray-700 bg-transparent flex flex-col justify-end gap-5  ">
+      <RiVipCrown2Line className="text-3xl "/>
+      <span className="font-semibold text-4xl" >Planck’s Unified Processing Power</span>
+      <span className="text-xl" >Planck harnesses the processing power of smartphones, desktops, and data centers.</span>
+      </div>
+      <div className="rounded-2xl p-10 w-full col-span-5 shadow-inner bg-[url(/numeric.png)]  shadow-gray-700 bg-transparent flex flex-col justify-end gap-5  ">
+      <FaUserCheck className="text-3xl" />
+     <span className="font-semibold text-4xl" >Simplified Mining</span>
+     <span className="text-xl" >The industry's user-friendliest mining app requires no tech skills, crypto expertise, or staking to start mining.</span>
+      </div>
 
-      <div className=" w-[90%]  shadow-xl rounded-xl  flex ">
-        <div className="bg-[url(/eneterprise2.svg)] bg-white  rounded-s-xl p-5 h-full  bg-no-repeat drop-shadow-2xl w-full bg-cover "></div>
-        <div className="bg-[#374151] rounded-e-xl w-[48%] p-8 flex flex-col justify-between gap-10">
-          <div className="flex flex-col gap-10">
-            <span className="font-bold font-nunito text-4xl">
-              Enterprise Solutions tailored to your business
-            </span>
-            <span className="text-semibold font-nunito text-lg">
-              Contact our team for API and infrastructure services customized to
-              your enterprise, or compute
-            </span>
-          </div>
-
-          <div>
-            <Button
-              className="text-nowrap"
-              customClass={
-                "h-[60px] bg-teal-500 justify-center text-nowrap lg:w-full xl:w-full w-full 2xl:w-[40%]"
-              }
-              label="Learn More"
-            />
-          </div>
-        </div>
       </div>
     </div>
   );
